@@ -1,0 +1,49 @@
+/* team socials */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+&-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        color: var(--icon-fill-one);
+        border-radius: 50%;
+
+        transition: color var(--anim), background-color var(--anim);
+
+        &:hover,
+        &:focus {
+                color: #ffffff;
+                background-color: var(--accent-color);
+            }
+    }
+
+&-icon {
+    fill: currentColor;
+}
+}
+
+/* footer socials */
+
+.socials-f-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: var(--white-text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: color var(--anim), background-color var(--anim);
+
+&:hover,
+&:focus {
+        background-color: var(--accent-color);
+        color: var(--white-text-color);
+    }
+}

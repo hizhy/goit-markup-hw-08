@@ -1,0 +1,21 @@
+/*  основний колір тексту #757575 */
+/* додатковий колір тексту #212121; */
+/* вторинний колір фону #F5F4FA; */
+/* колір фону підвалу #2F303A; */
+/* колір тексту підвалу rgba(255,255,255,0.6) */
+/* акцент #2196F3; */
+
+:root {
+    --text-color: #757575;
+    --sec-text-color: #212121;
+    --bg-color: #ffffff;
+    --white-text-color: #ffffff;
+    --hero-bg-color: #2f303a;
+    --sec-bg-color: #f5f4fa;
+    --accent-color: #2196f3;
+    --icon-fill-one: #afb1b8;
+
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --indent: 30px;
+}   

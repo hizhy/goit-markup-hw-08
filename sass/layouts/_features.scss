@@ -1,0 +1,27 @@
+/* features */
+.features {
+    padding-bottom: 0;
+
+&__item {
+        width: 270px;
+    }
+&__thumb {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-bg-color);
+    border-radius: 4px;
+}
+&__title {
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+&__text {
+    margin-top: 10px;
+    line-height: 1.71;
+}
+}

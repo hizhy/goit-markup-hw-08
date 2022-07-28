@@ -1,0 +1,117 @@
+/* Form inside */
+
+.form-title {
+    width: 448px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 41px;
+    padding-left: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sec-text-color);
+}
+
+.box-data-list {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.box-element {
+    position: relative;
+}
+
+.box-element:not(:last-child) {
+    margin-bottom: 28px;
+}
+
+.field-name {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    color: var(--text-color);
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 1.17;
+}
+
+.icon-input {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    transition: fill var(--anim);
+}
+
+.input-field {
+    width: 100%;
+    padding-left: 42px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 12px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border var(--anim);
+
+&:focus {
+        border: 1px solid var(--accent-color);
+        outline: none;
+    }
+}
+
+.input-field:focus+.icon-input {
+    fill: var(--accent-color);
+}
+
+.comment-field {
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    &::placeholder {
+            color: rgba(117, 117, 117, 0.5);
+        }
+}
+
+.agree {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 423px;
+    height: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-check {
+    border: 1px solid var(--sec-text-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    transition: background-color var(--anim), border var(--anim);
+}
+
+.policy {
+    line-height: 1.46;
+
+&-agree {
+        color: var(--accent-color);
+    }
+}
+
+.origin-checkbox:checked+.icon-check {
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-cl);
+}
+
+.submit-button {
+    position: absolute;
+    display: block;
+    top: 491px;
+    left: calc(50% - 100px);
+}
