@@ -27,8 +27,8 @@
     border-radius: 4px;
 }
 &__title {
-            @media screen and (max-width: 479px) {
-                    text-align: center;;
+            @media screen and (max-width: 767px) {
+                    text-align: center;
                 }
     margin-top: 30px;
     font-size: 14px;

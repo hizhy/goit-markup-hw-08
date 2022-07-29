@@ -20,5 +20,9 @@
             letter-spacing: 0.06em;
             text-align: center;
             text-transform: uppercase;
+
+                @media screen and (max-width: 1199px) {
+                        font-size: 26px;
+                    }
         }
 }
