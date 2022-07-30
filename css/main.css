@@ -142,9 +142,14 @@ body.no-scroll {
   display: inline-block;
   color: var(--accent-color);
   font-weight: 700;
-  font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .studio-black {
@@ -475,9 +480,22 @@ body.no-scroll {
   border: 1px solid #ececec;
 }
 .header .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .header .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 93px;
+  }
 }
 .header-container {
   display: -webkit-box;
@@ -488,10 +506,23 @@ body.no-scroll {
           align-items: center;
 }
 .header-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .header-item {
   position: relative;
@@ -501,12 +532,17 @@ body.no-scroll {
 }
 
 .header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .header-nav-list {
   display: -webkit-box;
@@ -529,16 +565,29 @@ body.no-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.contact:not(:last-child) {
-  margin-right: 50px;
+@media screen and (max-width: 1199px) {
+  .contact {
+    font-size: 12px;
+  }
+  .contact:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+  .contact:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 .contact-icon {
   fill: var(--text-color);
@@ -548,6 +597,26 @@ body.no-scroll {
 }
 .link:hover .contact-icon, .link:focus .contact-icon {
   fill: currentColor;
+}
+.contact-icon-mail {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contact-icon-phone {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-icon-phone {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .link.current {
@@ -874,18 +943,43 @@ body.no-scroll {
 /* --portfolio styles-- */
 /* buttons styles */
 .buttons-list {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
+@media screen and (max-width: 767px) {
+  .buttons-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .buttons-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buttons-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 35px;
+  }
+}
 
+.l-btn {
+  margin-bottom: 15px;
+}
 .l-btn:not(:last-child) {
   margin-right: 8px;
 }

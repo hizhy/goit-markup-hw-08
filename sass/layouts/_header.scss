@@ -4,9 +4,21 @@
     border: 1px solid #ececec;
 
     .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 93px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+
+    @media screen and (min-width: 768px) {
+            padding-top: 26px;
+            padding-bottom: 26px;
+            margin-right: 88px;
+        }
+
+    @media screen and (min-width: 1200px) {
+            padding-top: 24px;
+            padding-bottom: 25px;
+            margin-right: 93px;
+        }
 }
 
 &-container {
@@ -14,8 +26,17 @@
     align-items: center;
 }
 &-group {
-    display: flex;
-    margin-left: auto;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-left: auto;
+    }
+
+    @media screen and (max-width: 1199px) {
+        flex-direction: column;
+    }
+    
 }
 &-item {
     position: relative;
@@ -27,39 +48,57 @@
 }
 
 .header-nav {
+    display: none;
+
+@media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+}
 
     &-list {
-            display: flex;
-        }
-.link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: var(--sec-text-color);
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+        display: flex;
+    }
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
+    .link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        color: var(--sec-text-color);
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
     }
 }
-}
+
 
 
 .contact {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: center;
 
+@media screen and (max-width: 1199px) {
+    font-size: 12px;
+    &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+}
+
+@media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+
     &:not(:last-child) {
             margin-right: 50px;
-        }
+        }    
+    }
+    
 &-icon {
     fill: var(--text-color);
     margin-right: 10px;
@@ -68,6 +107,24 @@
     .link:hover &,
     .link:focus & {
         fill: currentColor;
+    }
+    &-mail {
+        width: 14px;
+        height: 10px;
+
+        @media screen and (min-width: 1200px) {
+            width: 16px;
+            height: 12px;
+        }
+    }
+    &-phone {
+        width: 10px;
+        height: 14px;
+
+        @media screen and (min-width: 1200px) {
+            width: 10px;
+            height: 16px;
+        }
     }
 }
 }

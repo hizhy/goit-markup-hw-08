@@ -2,14 +2,34 @@
 
 /* buttons styles */
 .buttons-list {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: flex-start;
+
+    @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            justify-content: start;
+    }
+    
+    @media screen and (min-width: 768px) {
+            justify-content: center;
+            margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+            justify-content: center;
+            margin-bottom: 35px;
+    }
 }
 
-.l-btn:not(:last-child) {
-    margin-right: 8px;
+.l-btn {
+    margin-bottom: 15px;
+    
+    &:not(:last-child) {
+        margin-right: 8px;
+        
+    }
 }
 
 /* project styles */
@@ -32,7 +52,6 @@
             width: calc((100% - 30px * 2) / 3);
         }
     
-
 &-link {
     display: block;
     transition: box-shadow var(--anim);
