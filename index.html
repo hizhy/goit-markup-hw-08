@@ -25,6 +25,14 @@
     <header class="header">
       <div class="header-container container">
         <a class="logo link" href="#">Web<span class="studio-black">Studio</span> </a>
+
+        <button class="mobile-menu-btn" type="button" data-menu-button>
+          <svg class="mobile-menu-icon" width="24" height="16">
+            <use class="mobile-menu-burger" href="./images/sprite.svg#icon-burger-menu"></use>
+            <use class="mobile-menu-close" href="./images/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+
         <nav class="header-nav">
           <ul class="header-nav-list list">
             <li class="header-item">
@@ -572,6 +580,7 @@
     </footer> -->
 
     <!-- Модальне вікно -->
+
     <div class="backdrop is-hidden" data-modal>
       <form class="modal" action="">
         <h2 class="form-title">Залиште свої дані, ми вам перетелефонуємо</h2>
@@ -625,6 +634,48 @@
         </button>
       </form>
     </div>
+
+    <!-- Мобільне меню -->
+
+    <div class="mobile-menu" data-menu>
+      <ul class="mobile-menu-nav list">
+        <li class="mobile-menu-nav-item">
+          <a class="link current" href="./index.html">Студія </a>
+        </li>
+        <li class="mobile-menu-nav-item">
+          <a class="link" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="mobile-menu-nav-item">
+          <a class="link" href="">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts list">
+        <li class="mobile-menu-contacts-item">
+          <a class="link accent" href=""> +38 096 111 11 11 </a>
+        </li>
+        <li class="mobile-menu-contacts-item">
+          <a class="link" href="">info@devstudio.com</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-socials list">
+        <li class="mobile-menu-socials-item">
+          <a class="mobile-menu-socials-link link" href=""> Instagram </a>
+        </li>
+        <li class="mobile-menu-socials-item">
+          <a class="mobile-menu-socials-link link" href="">Twitter</a>
+        </li>
+        <li class="mobile-menu-socials-item">
+          <a class="mobile-menu-socials-link link" href="">Facebook</a>
+        </li>
+        <li class="mobile-menu-socials-item">
+          <a class="mobile-menu-socials-link link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
