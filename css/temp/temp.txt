@@ -1,0 +1,3 @@
+srcset="./images/team/w/photo1_270.jpg w270, ./images/team/w/photo1_354.jpg w354, ./images/team/w/photo1_450.jpg w450, ./images/team/w/photo1_540.jpg w540,./images/team/w/photo1_708.jpg w708,./images/team/w/photo1_900.jpg w900"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 450px, (max-width: 767px) 708px, 100vw"
+                
