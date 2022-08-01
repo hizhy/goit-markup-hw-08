@@ -1,10 +1,12 @@
 /* Form inside */
 
 .form-title {
-    width: 448px;
+    width: calc(100% - 80px);
+    text-align: center;
     margin-top: 40px;
     margin-bottom: 30px;
-    margin-left: 41px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 2px;
     font-size: 20px;
     font-weight: 700;
@@ -12,7 +14,7 @@
 }
 
 .box-data-list {
-    width: 448px;
+    width: calc(100% - 80px);
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -76,17 +78,25 @@
     &::placeholder {
             color: rgba(117, 117, 117, 0.5);
         }
+
+        @media screen and (max-width: 400px) {
+            height: 80px;
+        }
 }
 
 .agree {
     display: flex;
     flex-direction: row-reverse;
-    width: 423px;
+    width: calc(100% - 80px);
     height: 24px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+            width: 423px;
+        }
 }
 
 .icon-check {
@@ -112,6 +122,6 @@
 .submit-button {
     position: absolute;
     display: block;
-    top: 491px;
+    top: 85%;
     left: calc(50% - 100px);
 }

@@ -218,6 +218,7 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   -webkit-transition: opacity var(--anim), visibility var(--anim);
   transition: opacity var(--anim), visibility var(--anim);
 }
@@ -236,9 +237,9 @@ body.no-scroll {
   position: absolute;
   left: 50%;
   top: 50%;
-  background-color: #ffffff;
-  width: 528px;
-  height: 581px;
+  background-color: var(--bg-color);
+  width: calc(100% - 30px);
+  height: 560px;
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -248,6 +249,19 @@ body.no-scroll {
   transition: -webkit-transform var(--anim);
   transition: transform var(--anim);
   transition: transform var(--anim), -webkit-transform var(--anim);
+  overflow-y: scroll;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .close-button {
@@ -279,10 +293,12 @@ body.no-scroll {
 
 /* Form inside */
 .form-title {
-  width: 448px;
+  width: calc(100% - 80px);
+  text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
-  margin-left: 41px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 2px;
   font-size: 20px;
   font-weight: 700;
@@ -290,7 +306,7 @@ body.no-scroll {
 }
 
 .box-data-list {
-  width: 448px;
+  width: calc(100% - 80px);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -367,6 +383,11 @@ body.no-scroll {
 .comment-field::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
+@media screen and (max-width: 400px) {
+  .comment-field {
+    height: 80px;
+  }
+}
 
 .agree {
   display: -webkit-box;
@@ -376,7 +397,7 @@ body.no-scroll {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  width: 423px;
+  width: calc(100% - 80px);
   height: 24px;
   margin-right: auto;
   margin-left: auto;
@@ -386,6 +407,11 @@ body.no-scroll {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .agree {
+    width: 423px;
+  }
 }
 
 .icon-check {
@@ -411,7 +437,7 @@ body.no-scroll {
 .submit-button {
   position: absolute;
   display: block;
-  top: 491px;
+  top: 85%;
   left: calc(50% - 100px);
 }
 
@@ -489,7 +515,7 @@ body.no-scroll {
       -ms-flex-pack: center;
           justify-content: center;
   margin-left: auto;
-  z-index: 1000;
+  z-index: 100;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu-btn {
@@ -521,7 +547,7 @@ body.no-scroll {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   width: 100vw;
