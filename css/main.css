@@ -139,6 +139,7 @@ body.no-scroll {
 }
 
 .logo {
+  font-family: Raleway;
   display: inline-block;
   color: var(--accent-color);
   font-weight: 700;
@@ -424,6 +425,12 @@ body.no-scroll {
 .policy {
   line-height: 1.46;
 }
+@media screen and (max-width: 1199px) {
+  .policy {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 .policy-agree {
   color: var(--accent-color);
 }
@@ -581,6 +588,8 @@ body.no-scroll {
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+}
+.mobile-menu-nav .link {
   color: var(--sec-text-color);
 }
 
@@ -636,7 +645,7 @@ body.no-scroll {
 /* header */
 .header {
   font-weight: 500;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .header .logo {
   padding-top: 16px;
@@ -781,15 +790,17 @@ body.no-scroll {
 .link.current {
   color: var(--accent-color);
 }
-.link.current::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .link.current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 
 /* hero */
@@ -1008,6 +1019,7 @@ body.no-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 92px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1027,19 +1039,16 @@ body.no-scroll {
 @media screen and (min-width: 480px) {
   .clients__link {
     width: 210px;
-    min-height: 92px;
   }
 }
 @media screen and (min-width: 768px) {
   .clients__link {
     width: 226px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__link {
     width: 170px;
-    height: 92px;
   }
 }
 

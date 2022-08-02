@@ -108,6 +108,11 @@
 
 .policy {
     line-height: 1.46;
+    
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.17;
+        }
 
 &-agree {
         color: var(--accent-color);
